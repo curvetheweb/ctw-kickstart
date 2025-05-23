@@ -2,7 +2,7 @@
 
 This is a starting point for fast, opinionated project development, built for speed, clarity, and developer empathy.
 
-behind the choices: [Choosing a Stack for Fun and Profit](https://ctw.dev/blog/choosing-a-stack)
+<!-- behind the choices: [Choosing a Stack for Fun and Profit](https://ctw.dev/blog/choosing-a-stack) -->
 
 ---
 
