@@ -1,0 +1,10 @@
+# Normalize line endings
+* text=auto eol=lf
+
+# Syntax-aware diffs
+*.ts diff=typescript
+*.tsx diff=typescript
+*.vue diff=html linguist-language=Vue
+
+# Don't diff build artifacts
+dist/* linguist-generated
