@@ -10,4 +10,25 @@ services:
     environment:
       - VITE_SUPABASE_URL=${VITE_SUPABASE_URL}
       - VITE_SUPABASE_ANON_KEY=${VITE_SUPABASE_ANON_KEY}
-    command: npm run dev -- --host 0.0.0.0
+      - FORCE_COLOR=1
+    command: ["pnpm", "dev", "--", "--host", "0.0.0.0"]
+    tty: true
+  supabase-db:
+    image: supabase/postgres:15.3.0
+    restart: unless-stopped
+    volumes:
+      - supabase-db-data:/var/lib/postgresql/data
+
+  supabase-api:
+    image: supabase/gotrue
+    depends_on:
+      - supabase-db
+    environment:
+      # connection string to supabase-db
+      - SUPABASE_DB_URL=postgresql://postgres:postgres@supabase-db:5432/postgres
+    volumes:
+      - supabase-migrations:/migrations
+
+volumes:
+  supabase-db-data:
+  supabase-migrations:
