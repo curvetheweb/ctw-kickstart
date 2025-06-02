@@ -18,4 +18,4 @@ COPY . .
 EXPOSE 5173
 
 # Start the dev server with Vite
-CMD ["pnpm", "dev"]
+# CMD ["pnpm", "dev", "--", "--host", "0.0.0.0"]
