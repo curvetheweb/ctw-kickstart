@@ -7,6 +7,7 @@ services:
       - "5173:5173"
     volumes:
       - ./frontend:/app
+      - /app/node_modules
     environment:
       - VITE_SUPABASE_URL=${VITE_SUPABASE_URL}
       - VITE_SUPABASE_ANON_KEY=${VITE_SUPABASE_ANON_KEY}
@@ -33,5 +34,6 @@ services:
       - 8080:8080
     volumes:
       - ./backend:/app
+      - /app/node_modules
     command: ["pnpm", "dev", "--", "--host", "0.0.0.0"]
     tty: true
