@@ -24,3 +24,14 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     tty: true
     stdin_open: true
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    volumes:
+      - ./backend:/app
+    command: ["pnpm", "dev", "--", "--host", "0.0.0.0"]
+    tty: true
