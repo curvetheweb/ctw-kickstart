@@ -3,10 +3,12 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+    container_name: ctw-frontend
     ports:
       - "5173:5173"
     volumes:
       - ./frontend:/app
+      - /app/node_modules
     environment:
       - VITE_SUPABASE_URL=${VITE_SUPABASE_URL}
       - VITE_SUPABASE_ANON_KEY=${VITE_SUPABASE_ANON_KEY}
@@ -14,24 +16,17 @@ services:
     command: ["pnpm", "dev", "--", "--host", "0.0.0.0"]
     tty: true
 
-  supabase:
-    build:
-      context: ./supabase
-    privileged: true
-    network_mode: "host"
-    volumes:
-      - ./supabase:/supabase
-      - /var/run/docker.sock:/var/run/docker.sock
-    tty: true
-    stdin_open: true
-
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
+    container_name: ctw-backend
     ports:
       - 8080:8080
     volumes:
       - ./backend:/app
-    command: ["pnpm", "dev", "--", "--host", "0.0.0.0"]
+      - /app/node_modules
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+    command: ["pnpm", "dev"]
     tty: true

@@ -1,23 +1,32 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "start": "node server.js",
-    "dev": "tsx watch server.ts"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.11.0",
-  "dependencies": {
-    "fastify": "^5.3.3"
-  },
-  "devDependencies": {
-    "@types/node": "^22.15.29",
-    "tsx": "^4.19.4",
-    "typescript": "^5.8.3"
-  }
+	"name": "backend",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"start": "node server.js",
+		"dev": "tsx watch server.ts",
+		"db:migrate": "drizzle-kit push",
+		"db:seed": "tsx src/db/seed.ts",
+		"db:init": "pnpm db:migrate && pnpm db:seed",
+		"db:types": "npx supabase gen types typescript --project-id ridmafyroxkypukcqwvq --schema public > src/db/database.types.ts"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"packageManager": "pnpm@10.11.0",
+	"dependencies": {
+		"dotenv": "^16.5.0",
+		"drizzle-orm": "^0.44.2",
+		"drizzle-seed": "^0.3.1",
+		"fastify": "^5.3.3",
+		"postgres": "^3.4.7"
+	},
+	"devDependencies": {
+		"@types/node": "^22.15.29",
+		"drizzle-kit": "^0.31.1",
+		"tsx": "^4.19.4",
+		"typescript": "^5.8.3"
+	}
 }

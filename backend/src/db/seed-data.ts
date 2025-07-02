@@ -1,0 +1,28 @@
+export const xpLevelsSeed = [
+	{ level: 1, xpRequired: 0, maxHp: 3, maxStamina: 5 },
+	{ level: 2, xpRequired: 100, maxHp: 3, maxStamina: 6 },
+	{ level: 3, xpRequired: 250, maxHp: 4, maxStamina: 6 },
+	{ level: 4, xpRequired: 450, maxHp: 4, maxStamina: 7 },
+	{ level: 5, xpRequired: 700, maxHp: 5, maxStamina: 7 },
+	{ level: 6, xpRequired: 1000, maxHp: 5, maxStamina: 8 },
+	{ level: 7, xpRequired: 1350, maxHp: 6, maxStamina: 8 },
+	{ level: 8, xpRequired: 1750, maxHp: 6, maxStamina: 9 },
+	{ level: 9, xpRequired: 2200, maxHp: 6, maxStamina: 10 },
+	{ level: 10, xpRequired: 2700, maxHp: 7, maxStamina: 10 },
+	{ level: 11, xpRequired: 3250, maxHp: 7, maxStamina: 11 },
+	{ level: 12, xpRequired: 3850, maxHp: 7, maxStamina: 12 },
+	{ level: 13, xpRequired: 4500, maxHp: 7, maxStamina: 13 },
+	{ level: 14, xpRequired: 5200, maxHp: 7, maxStamina: 14 },
+	{ level: 15, xpRequired: 5950, maxHp: 7, maxStamina: 15 },
+	// Prestige levels
+	{ level: 16, xpRequired: 6750, maxHp: 7, maxStamina: 15 },
+	{ level: 17, xpRequired: 7600, maxHp: 7, maxStamina: 15 },
+	{ level: 18, xpRequired: 8500, maxHp: 7, maxStamina: 15 },
+	{ level: 19, xpRequired: 9450, maxHp: 7, maxStamina: 15 },
+	{ level: 20, xpRequired: 10450, maxHp: 7, maxStamina: 15 },
+	{ level: 21, xpRequired: 11500, maxHp: 7, maxStamina: 15 },
+	{ level: 22, xpRequired: 12600, maxHp: 7, maxStamina: 15 },
+	{ level: 23, xpRequired: 13750, maxHp: 7, maxStamina: 15 },
+	{ level: 24, xpRequired: 14950, maxHp: 7, maxStamina: 15 },
+	{ level: 25, xpRequired: 16200, maxHp: 7, maxStamina: 15 }
+]

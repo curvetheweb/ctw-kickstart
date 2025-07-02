@@ -2,7 +2,7 @@
 FROM node:22-slim
 
 # Set working directory inside the container
-WORKDIR /api
+WORKDIR /app
 
 # Install pnpm via Corepack
 RUN corepack enable && corepack prepare pnpm@latest --activate
