@@ -17,16 +17,16 @@
 	"license": "ISC",
 	"packageManager": "pnpm@10.11.0",
 	"dependencies": {
-		"dotenv": "^16.5.0",
+		"dotenv": "^17.0.1",
 		"drizzle-orm": "^0.44.2",
 		"drizzle-seed": "^0.3.1",
-		"fastify": "^5.3.3",
+		"fastify": "^5.4.0",
 		"postgres": "^3.4.7"
 	},
 	"devDependencies": {
-		"@types/node": "^22.15.29",
-		"drizzle-kit": "^0.31.1",
-		"tsx": "^4.19.4",
+		"@types/node": "^24.0.10",
+		"drizzle-kit": "^0.31.4",
+		"tsx": "^4.20.3",
 		"typescript": "^5.8.3"
 	}
 }
